@@ -4,9 +4,13 @@
 #include <stdio.h>
 
 /**
- *  main entry
+ *  main - Entry point
  *
- *  return 0 (Success)
+ *  Description: Prints the last digit of a
+ *  randomly generated number and provides
+ *  additional information about it.
+ *
+ *  Return: 0 (Success)
  */
 
 int main(void)
