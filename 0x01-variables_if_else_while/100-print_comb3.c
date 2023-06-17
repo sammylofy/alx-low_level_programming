@@ -15,9 +15,9 @@ int main(void)
 
 	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		for (i = 1; i < 10; i++)
+		for (i = digit1 + 1; i < 10; i++)
 		{
-			putchar((digit1 % 10) + '0');
+			putchar(digit1 + '0');
 			putchar(i + '0');
 
 			if (digit1 != 8 || i != 9)
