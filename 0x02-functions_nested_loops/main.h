@@ -4,7 +4,8 @@
 #include <stdio.h>
 
 
-
+/* function declaration */
+void print_alphabet(void);
 
 
 
