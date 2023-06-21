@@ -6,7 +6,7 @@
  * Description: I used loop in printing them
  *
  * Return: returns nothing (void)
- */
+i */
 
 void jack_bauer(void)
 {
@@ -25,9 +25,7 @@ void jack_bauer(void)
 				_putchar('0' + hh / 10);
 				_putchar('0' + hh % 10);
 			}
-			_putchar(' ');
 			_putchar(':');
-			_putchar(' ');
 			if (mm < 10)
 			{
 				_putchar('0' + mm / 10);
