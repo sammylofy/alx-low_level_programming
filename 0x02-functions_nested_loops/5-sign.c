@@ -20,22 +20,15 @@ int print_sign(int n)
 	if (n > 0)
 	{
 		result = 1;
-		putchar('+');
+		_putchar('+');
 	} else if (n == 0)
 	{
-		putchar('0');
+		_putchar('0');
 	} else
 	{
-		putchar('-');
+		_putchar('-');
 		result = -1;
 	}
 
-	if (result == -1)
-		putchar('/');
-	else
-		putchar(result + '0');
-
-	putchar(',');
-	putchar(' ');
 	return (result);
 }
