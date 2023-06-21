@@ -14,6 +14,9 @@ void print_alphabet_x10(void);
 /*function declaration*/
 int _islower(int c);
 
+/*Function declaration*/
+int _isalpha(int c);
+
 
 #endif
 
