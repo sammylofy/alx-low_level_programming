@@ -6,7 +6,7 @@
  * Description: I used loop in printing them
  *
  * Return: returns nothing (void)
-i */
+ */
 
 void jack_bauer(void)
 {
