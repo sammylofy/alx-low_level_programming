@@ -42,10 +42,10 @@ void times_table(void)
 	{
 		for (col = 0; col < 10; col++)
 		{
-			printf("%d", timetable[row][col]);
+			printf("%*d", 3, timetable[row][col]);
 			if (col != 9)
 			{
-				printf(", \t");
+				printf(",");
 			}
 		}
 		printf("\n");
