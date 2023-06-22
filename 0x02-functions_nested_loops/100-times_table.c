@@ -35,7 +35,7 @@ void print_times_table(int n)
 				printf("%d", timetable[row][col]);
 				if (col != (n - 1))
 				{
-					printf(", ");
+					printf(", \t");
 				}
 			}
 			printf("\n");

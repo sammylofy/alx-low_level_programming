@@ -45,7 +45,7 @@ void times_table(void)
 			printf("%d", timetable[row][col]);
 			if (col != 9)
 			{
-				printf(", ");
+				printf(", \t");
 			}
 		}
 		printf("\n");
