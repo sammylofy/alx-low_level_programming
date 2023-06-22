@@ -7,12 +7,9 @@
  */
 int main(void)
 {
-	char c;
-
-	c = '0';
-	printf("%c: %d\n", c, _isdigit(c));
-	c = 'a';
-	printf("%c: %d\n", c, _isdigit(c));
-
+	print_diagonal(0);
+	print_diagonal(2);
+	print_diagonal(10);
+	print_diagonal(-4);
 	return (0);
 }
