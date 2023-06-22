@@ -15,39 +15,39 @@ void times_table(void)
 {
 	int timetable[10][10];
 	int row, col;
-	char digit[3] = {",", ' ', '\n'};
 
+	/* Initializing array to 0 */
 	for (row = 0; row < 10; row++)
 	{
 		for (col = 0; col < 10; col++)
+		{
 			timetable[row][col] = 0;
+		}
 	}
 
+	/* Performing calculations */
 	for (row = 0; row < 10; ++row)
 	{
 		for (col = 0; col < 10; ++col)
 		{
 			if (row != 0 || col != 0)
+			{
 				timetable[row][col] = row * col;
+			}
 		}
 	}
+
+	/* Printing the result */
 	for (row = 0; row < 10; row++)
 	{
 		for (col = 0; col < 10; col++)
 		{
-			if (timetable[row][col] < 10)
-				digit[0] = ' ';
-			else
-				digit[0] = '0' + timetable[row][col] / 10;
-
-			digit[1] = '0' + timetable[row][col] % 10;
-
-			if (col == 9)
-				write(1, digit, 2);
-			else
-				write(1, digit, 3);
+			printf("%d", timetable[row][col]);
+			if (col != 9)
+			{
+				printf(", ");
+			}
 		}
-
-		write(1, "\n", 2);
+		printf("\n");
 	}
 }
