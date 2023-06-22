@@ -5,41 +5,44 @@
  *
  * Return: No return value
  */
+
 void print_to_98(int n)
 {
 	int i;
 
-	if (n < 98)
+	if (n < 98 && n > 0)
 	{
 		i = n;
-		while (i <= 98)
-		{
-			print_number(i);
-			if (i != 98)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+
+		do {
+			printf("%d, ", i);
+			if (i == 98)
+				printf("%d", i);
 			i++;
-		}
+		} while (i <= 98);
 	}
 	else if (n > 98)
 	{
 		i = n;
-		while (i >= 98)
-		{
-			print_number(i);
-			if (i != 98)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+
+		do {
+			printf("%d, ", i);
+			if (i == 98)
+				printf("%d", i);
+
 			i--;
-		}
+		} while (i >= 98);
 	}
 	else
 	{
-		print_number(n);
+		i = n;
+
+		do {
+			printf("%d, ", i);
+			if (i == 98)
+				printf("%d", i);
+			i++;
+		} while (i <= 98);
 	}
-	putchar('\n');
+	printf("\n");
 }
