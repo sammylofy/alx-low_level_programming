@@ -11,7 +11,7 @@ int _isdigit(int c)
 {
 	int val;
 
-	if (c <= 57 && 48 >= c)
+	if (c >= '0' && c <= '9')
 		val = 1;
 	else
 		val = 0;
