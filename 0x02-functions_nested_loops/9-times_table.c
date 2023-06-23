@@ -13,41 +13,33 @@
  */
 void times_table(void)
 {
-	int timetable[10][10];
-	int row, col;
+	int i, j, k;
 
-	/* Initializing array to 0 */
-	for (row = 0; row < 10; row++)
+	for (i = 0; i < 10; i++)
 	{
-		for (col = 0; col < 10; col++)
+		for (j = 0; j < 10; j++)
 		{
-			timetable[row][col] = 0;
-		}
-	}
-
-	/* Performing calculations */
-	for (row = 0; row < 10; ++row)
-	{
-		for (col = 0; col < 10; ++col)
-		{
-			if (row != 0 || col != 0)
+			k = j * i;
+			if (j == 0)
 			{
-				timetable[row][col] = row * col;
+				_putchar(k + '0');
+			}
+
+			if (k < 10 && j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			} else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 10) + '0');
+				_putchar((k % 10) + '0');
 			}
 		}
-	}
-
-	/* Printing the result */
-	for (row = 0; row < 10; row++)
-	{
-		for (col = 0; col < 10; col++)
-		{
-			printf("%*d", 3, timetable[row][col]);
-			if (col != 9)
-			{
-				printf(",");
-			}
-		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
+
