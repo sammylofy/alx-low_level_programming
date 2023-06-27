@@ -5,18 +5,19 @@
  * @src: Source doc
  * Return: string
  */
-char *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
-	char *dest_ptr = dest;  /* Store the initial address of dest */
+	int len = 0;
+	int x = 0;
 
-	while (*src != '\0')
+	while (*(src + len) != '\0')
 	{
-		*dest = *src;  /* Copy the character */
-		dest++;  /* Move dest pointer to the next position */
-		src++;  /* Move src pointer to the next position */
+		len++;
 	}
-
-	*dest = '\0';  /* Append the terminating null byte to dest */
-
-	return (dest_ptr);  /* Return the pointer to dest */
+	for ( ; x < len ; x++)
+	{
+		dest[x] = src[x];
+	}
+	dest[len] = '\0';
+	return (dest);
 }
