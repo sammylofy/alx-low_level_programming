@@ -11,35 +11,28 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i, count = 0;
-	unsigned long int current;
-	char buffer[65];
+	unsigned long int mask, leading_zeros;
 
-	for (i = 63; i >= 0; i--)
+	mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
+	leading_zeros = 1;
+
+	while (mask)
 	{
-		current = n >> i;
-
-		if (current & 1)
+		if (n & mask)
 		{
-			buffer[count] = '1';
-			count++;
+			leading_zeros = 0;
+			putchar('1');
 		}
-		else if (count)
+		else if (!leading_zeros)
 		{
-			buffer[count] = '0';
-			count++;
+			putchar('0');
 		}
-	}
-	if (!count)
-	{
-		buffer[count] = '0';
-		count++;
+
+		mask >>= 1;
 	}
 
-
-	for (i = 0; i < count; i++)
+	if (leading_zeros)
 	{
-		putchar(buffer[i]);
+		putchar('0');
 	}
-	putchar('\n');
 }
