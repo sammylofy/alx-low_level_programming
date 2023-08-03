@@ -11,21 +11,35 @@
  */
 void print_binary(unsigned long int n)
 {
-	int leadingZero = 1;
-	int i;
+	int i, count = 0;
+	unsigned long int current;
+	char buffer[65];
 
-	unsigned long int bitLength = sizeof(unsigned long int) * 8;
-
-	for (i = bitLength - 1; i >= 0; i--)
+	for (i = 63; i >= 0; i--)
 	{
-		int bit = (n & (1ul << i)) ? 1 : 0;
+		current = n >> i;
 
-
-		if (bit == 1)
-			leadingZero = 0;
-
-
-		if (leadingZero == 0 || i == 0)
-			printf("%d", bit);
+		if (current & 1)
+		{
+			buffer[count] = '1';
+			count++;
+		}
+		else if (count)
+		{
+			buffer[count] = '0';
+			count++;
+		}
 	}
+	if (!count)
+	{
+		buffer[count] = '0';
+		count++;
+	}
+
+
+	for (i = 0; i < count; i++)
+	{
+		putchar(buffer[i]);
+	}
+	putchar('\n');
 }
