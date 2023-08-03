@@ -3,9 +3,16 @@
 unsigned int binaryToUnitHelper(int base, int power);
 
 /**
- * binary_to_unit - A function to convert from binary
- * @b: The strings of binary digits only
- * Return: The base 10 equivalent of the binary
+ * binary_to_uint - A function to convert
+ * from binary to unsigned int
+ * @b: The string of binary digits
+ * (only '0' and '1')
+ *
+ * Description: This function converts a
+ * binary string to an unsigned int.
+ *
+ * Return: The base 10 equivalent of the
+ * binary string, or 0 if the input is invalid.
  */
 
 unsigned int binary_to_uint(const char *b)
@@ -30,10 +37,15 @@ unsigned int binary_to_uint(const char *b)
 	return (result);
 }
 /**
- * binaryToUnitHelper - converts powers
- * @base: base integer
- * @power: power integer
- * Return: Returns the value
+ * binaryToUnitHelper - A helper function
+ * for converting powers of a base
+ * @base: The base integer
+ * @power: The power integer
+ *
+ * Description: This function calculates
+ * the value of the base raised to the power.
+ *
+ * Return: The calculated value.
  */
 unsigned int binaryToUnitHelper(int base, int power)
 {
