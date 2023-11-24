@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		return;
 	}
 
@@ -22,7 +22,7 @@ void print_binary(unsigned long int n)
 		}
 		else
 		{
-			putchar((n & mask) ? '1' : '0');
+			_putchar((n & mask) ? '1' : '0');
 			flag = 1; /* Set the flag after the first non-zero bit */
 		}
 		mask >>= 1; /* Shift the mask to the right */
